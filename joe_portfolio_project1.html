@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+       
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+    background-color: #0b2479;
+}
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+
+@keyframes slide {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+    background-position: center top;
+	background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+        animation: slide 2s forwards;
+            position: relative;
+            transition: background-color 0.5s;
+
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        background-position: center top;
+        
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:900px){
+	.myP {
+		padding:2%;
+	}
+}
+@media all and (max-width:800px )
+{
+    .myP{
+        padding:4%;
+    }
+}
+@media all and (max-width:700px)
+{
+    .myP{
+        padding: 6%;
+    }
+}
+@media all and (max-width:500px)
+{
+    .myP{
+        padding: 8%;
+    }
+}
+@media all and (max-width: 400px)
+{
+    .myP{
+        padding: 50%;
+    }
+}
+h2{
+      animation: slide 2s forwards;
+            position: relative;
+            transition: background-color 0.5s;
+            color: aliceblue;
+
+}
+footer {
+            background: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+         @keyframes slide {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        .showcase {
+            background: url('showcase.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 400px;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .containe {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .item {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 calc(25% - 20px); 
+            box-sizing: border-box;
+        }
+        .containe img
+        {
+            width: 400px;
+            height: 300px;
+            animation: slide 2s forwards;
+            position: relative;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="https://st.hzcdn.com/simgs/d69316f80cc2f9e6_3-2945/_.jpg" width="100px" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <section class="home">
+        <h2 class="myH2" style="padding-top: 300px;">Hello,I'm Joe Anni Jeffia </h2>
+    </section>
+    <div style="height: 1000px" style="background-color: #111;">
+        <section class="showcase">
+            <div class="containe">
+                <div class="item"><a href="https://en.wikipedia.org/wiki/Pasta"><img src="https://media.istockphoto.com/id/1299755243/vector/creative-idea-line-icon-lump-with-gear-icon-brain-in-lightbulb-vector-illustration-thin-sign.jpg?s=612x612&w=0&k=20&c=CaqnVEqz2RqzbqoEGhU8UBFMTBGWHa1zROXrtTtlH_I="></a>
+                <figcaption style="color: #000000; font-size: large;">SKILLSET</figcaption></div>
+                <div class="item"><a href="https://natashaskitchen.com/caesar-salad-recipe/"><img src="https://media.istockphoto.com/id/1331164793/vector/study-championship-logo-template-design.jpg?s=612x612&w=0&k=20&c=7QClXetCt90IySTsOVBWPzEqWL6TWxAwRQnFmhNNsbM=">
+                <figcaption style="color: #000000; font-size: large;">Achievements</figcaption></a></div>
+                <div class="item"><a href="https://en.wikipedia.org/wiki/Chocolate_cake"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QQlH1LylSFN5PS9L_6kAw-nWth5KQvA-Ug&s">
+                    <figcaption style="color: #000000; font-size: large;">Hobbies</figcaption></a></div>
+                
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+    <footer>
+        <p><a href="#feedback">FeedBack</a></p><p>Joe's Portfolio &copy; 2024</p>
+    </footer>
+</body>
+</html>
